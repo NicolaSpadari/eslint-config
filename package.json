@@ -1,5 +1,5 @@
 {
-	"name": "@spada/eslint-config-monorepo",
+	"name": "@spada/eslint-config",
 	"version": "1.0.0",
 	"license": "MIT",
 	"author": "Nicola Spadari <spadari.nicola@gmail.com> (https://github.com/nicolaspadari/)",
