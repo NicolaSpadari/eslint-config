@@ -1,0 +1,25 @@
+{
+	"name": "@spada/eslint-config-vue",
+	"version": "1.0.0",
+	"description": "",
+	"keywords": [],
+	"license": "MIT",
+	"author": "Nicola Spadari <spadari.nicola@gmail.com> (https://github.com/nicolaspadari/)",
+	"files": [
+		"index.js"
+	],
+	"main": "index.js",
+	"peerDependencies": {
+		"eslint": ">=8.7.0"
+	},
+	"publishConfig": {
+		"access": "public"
+	},
+	"dependencies": {
+		"@spada/eslint-config-ts": "^1.0.0",
+		"eslint-plugin-vue": "^8.3.0"
+	},
+	"devDependencies": {
+		"eslint": "^8.7.0"
+	}
+}

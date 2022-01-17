@@ -1,0 +1,35 @@
+{
+	"name": "@spada/eslint-config-basic",
+	"version": "1.0.0",
+	"description": "",
+	"keywords": [],
+	"license": "MIT",
+	"author": "Nicola Spadari <spadari.nicola@gmail.com> (https://github.com/nicolaspadari/)",
+	"files": [
+		"index.js"
+	],
+	"main": "index.js",
+	"scripts": {
+		"lint": "eslint . --config=index.js"
+	},
+	"peerDependencies": {
+		"eslint": ">=8.7.0"
+	},
+	"dependencies": {
+		"eslint-config-standard": "17.0.0-0",
+		"eslint-plugin-eslint-comments": "^3.2.0",
+		"eslint-plugin-html": "^6.2.0",
+		"eslint-plugin-import": "^2.25.4",
+		"eslint-plugin-jsonc": "^2.0.0",
+		"eslint-plugin-n": "^14.0.0",
+		"eslint-plugin-promise": "^6.0.0",
+		"eslint-plugin-unicorn": "^40.1.0",
+		"jsonc-eslint-parser": "^2.1.0"
+	},
+	"devDependencies": {
+		"eslint": "^8.7.0"
+	},
+	"publishConfig": {
+		"access": "public"
+	}
+}

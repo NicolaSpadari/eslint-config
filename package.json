@@ -1,0 +1,16 @@
+{
+	"name": "@spada/eslint-config-monorepo",
+	"version": "1.0.0",
+	"license": "MIT",
+	"author": "Nicola Spadari <spadari.nicola@gmail.com> (https://github.com/nicolaspadari/)",
+	"private": true,
+	"scripts": {
+		"lint": "npx eslint --ext .js,.json,.vue --fix .",
+		"release": "lerna publish --conventional-commits"
+	},
+	"devDependencies": {
+		"@spada/eslint-config": "*",
+		"eslint": "^8.7.0",
+		"lerna": "^4.0.0"
+	}
+}
