@@ -1,52 +1,56 @@
 module.exports = {
-    "env": {
+	env: {
 		"es6": true,
 		"browser": true,
-		"node": true
+		"node": true,
 	},
-	"extends": ["standard", "plugin:import/recommended", "plugin:eslint-comments/recommended", "plugin:jsonc/recommended-with-jsonc", "plugin:vue/vue3-recommended"],
-	"plugins": ["html", "unicorn"],
-	"settings": {
+	extends: ["standard", "plugin:import/recommended", "plugin:eslint-comments/recommended", "plugin:jsonc/recommended-with-jsonc", "plugin:vue/vue3-recommended"],
+	plugins: ["html", "unicorn"],
+	settings: {
 		"import/resolver": {
-			"node": { "extensions": [".js", ".mjs"] }
-		}
+			node: { "extensions": [".js", ".mjs"] },
+		},
 	},
-	"overrides": [
+	overrides: [
 		{
-			"files": ["*.json", "*.json5"],
-			"parser": "jsonc-eslint-parser",
-			"rules": {
+			files: ["*.json", "*.json5"],
+			parser: "jsonc-eslint-parser",
+			rules: {
 				"quotes": ["error", "single"],
 				"quote-props": ["error", "always"],
-				"comma-dangle": ["error", "never"]
-			}
+				"comma-dangle": ["error", "never"],
+			},
 		},
 		{
-			"files": ["package.json"],
-			"parser": "jsonc-eslint-parser",
-			"rules": {
+			files: ["package.json"],
+			parser: "jsonc-eslint-parser",
+			rules: {
 				"jsonc/sort-keys": [
 					"error",
 					{
-						"pathPattern": "^$",
-						"order": ["name", "version", "description", "keywords", "license", "repository", "funding", "author", "type", "files", "exports", "main", "module", "unpkg", "bin", "scripts", "husky", "lint-staged", "peerDependencies", "peerDependenciesMeta", "dependencies", "devDependencies", "eslintConfig"]
+						pathPattern: "^$",
+						order: ["name", "version", "description", "keywords", "license", "repository", "funding", "author", "type", "files", "exports", "main", "module", "unpkg", "bin", "scripts", "husky", "lint-staged", "peerDependencies", "peerDependenciesMeta", "dependencies", "devDependencies", "eslintConfig"],
 					},
 					{
-						"pathPattern": "^(?:dev|peer|optional|bundled)?[Dd]ependencies$",
-						"order": { "type": "asc" }
-					}
-				]
-			}
+						pathPattern: "^(?:dev|peer|optional|bundled)?[Dd]ependencies$",
+						order: { type: "asc" },
+					},
+				],
+			},
 		},
 		{
-			"files": ["*.vue"],
-			"parser": "vue-eslint-parser",
-			"rules": {
-				"no-unused-vars": "off"
-			}
-		}
+			files: ["*.vue"],
+			parser: "vue-eslint-parser",
+			parserOptions: {
+				parser: "@babel/eslint-parser",
+				requireConfigFile: false,
+			},
+			rules: {
+				"no-unused-vars": "off",
+			},
+		},
 	],
-	"rules": {
+	rules: {
 		// import
 		"import/order": "error",
 		"import/first": "error",
@@ -62,49 +66,49 @@ module.exports = {
 		"no-unused-vars": "warn",
 		"no-param-reassign": "off",
 		"array-bracket-spacing": ["error", "never"],
-		"brace-style": ["error", "1tbs", { "allowSingleLine": true }],
+		"brace-style": ["error", "1tbs", { allowSingleLine: true }],
 		"block-spacing": ["error", "always"],
 		"camelcase": "warn",
-		"comma-spacing": ["error", { "before": false, "after": true }],
+		"comma-spacing": ["error", { before: false, after: true }],
 		"comma-style": ["error", "last"],
 		"comma-dangle": ["error", "always-multiline"],
 		"no-constant-condition": "warn",
 		"no-debugger": "error",
 		"no-console": ["off"],
 		"no-cond-assign": ["error", "always"],
-        "no-tabs": ["off"],
+		"no-tabs": ["off"],
 		"func-call-spacing": ["off", "never"],
-		"key-spacing": ["error", { "beforeColon": false, "afterColon": true }],
+		"key-spacing": ["error", { beforeColon: false, afterColon: true }],
 		"indent": ["off", "tab"],
 		"no-restricted-syntax": ["error", "DebuggerStatement", "LabeledStatement", "WithStatement"],
 		"object-curly-spacing": ["error", "always"],
 		"no-return-await": "off",
 		"space-before-function-paren": ["error", "never"],
-        "max-len": ["error", { "code": 130}],
+		"max-len": ["warn", { code: 130 }],
 
 		// es6
 		"no-var": "error",
 		"prefer-const": [
 			"error",
 			{
-				"destructuring": "any",
-				"ignoreReadBeforeAssign": true
-			}
+				destructuring: "any",
+				ignoreReadBeforeAssign: true,
+			},
 		],
 		"prefer-arrow-callback": [
 			"error",
 			{
-				"allowNamedFunctions": false,
-				"allowUnboundThis": true
-			}
+				allowNamedFunctions: false,
+				allowUnboundThis: true,
+			},
 		],
 		"object-shorthand": [
 			"error",
 			"always",
 			{
-				"ignoreConstructors": false,
-				"avoidQuotes": true
-			}
+				ignoreConstructors: false,
+				avoidQuotes: true,
+			},
 		],
 		"prefer-rest-params": "error",
 		"prefer-spread": "error",
@@ -116,28 +120,32 @@ module.exports = {
 			"error",
 			"always",
 			{
-				"line": {
-					"markers": ["/"],
-					"exceptions": ["/", "#"]
+				line: {
+					markers: ["/"],
+					exceptions: ["/", "#"],
 				},
-				"block": {
-					"markers": ["!"],
-					"exceptions": ["*"],
-					"balanced": true
-				}
-			}
+				block: {
+					markers: ["!"],
+					exceptions: ["*"],
+					balanced: true,
+				},
+			},
 		],
 
-        // vue
-        "vue/max-attributes-per-line": "off",
+		// vue
+		"vue/max-attributes-per-line": "off",
 		"vue/no-v-html": "off",
 		"vue/require-prop-types": "error",
 		"vue/require-default-prop": "off",
 		"vue/multi-word-component-names": "off",
-        "vue/html-indent": ["error", "tab"],
-        "vue/script-indent": ["error", "tab", {
-            "baseIndent": 1
-        }],
+		"vue/html-indent": ["error", "tab"],
+		"vue/script-indent": [
+			"error",
+			"tab",
+			{
+				baseIndent: 1,
+			},
+		],
 
 		// best-practice
 		"array-callback-return": "error",
@@ -171,19 +179,19 @@ module.exports = {
 		"unicorn/prefer-type-error": "error",
 		"unicorn/throw-new-error": "error",
 
-		"no-use-before-define": ["error", { "functions": false, "classes": false, "variables": true }],
+		"no-use-before-define": ["error", { functions: false, classes: false, variables: true }],
 		"eslint-comments/disable-enable-pair": "off",
 		"import/no-named-as-default-member": "off",
 
 		"sort-imports": [
 			"warn",
 			{
-				"ignoreCase": false,
-				"ignoreDeclarationSort": true,
-				"ignoreMemberSort": false,
-				"memberSyntaxSortOrder": ["none", "all", "multiple", "single"],
-				"allowSeparatedGroups": false
-			}
-		]
-	}
-}
+				ignoreCase: false,
+				ignoreDeclarationSort: true,
+				ignoreMemberSort: false,
+				memberSyntaxSortOrder: ["none", "all", "multiple", "single"],
+				allowSeparatedGroups: false,
+			},
+		],
+	},
+};

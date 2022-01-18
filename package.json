@@ -1,35 +1,38 @@
 {
-    "name": "@spada/eslint-config",
-    "version": "0.0.3",
-    "license": "MIT",
-    "author": "Nicola Spadari <spadari.nicola@gmail.com> (https://github.com/NicolaSpadari/)",
-    "description": "My custom ESlint config for Javascript and Vue projects",
-    "scripts": {
-        "publish:patch": "npm version patch --no-git-tag-version && npm publish",
-        "publish:minor": "npm version minor --no-git-tag-version && npm publish",
-        "publish:major": "npm version major --no-git-tag-version && npm publish"
-    },
-    "files": [
-        "index.js"
-    ],
-    "main": "index.js",
-    "peerDependencies": {
-        "eslint": ">=7.4.0"
-    },
-    "publishConfig": {
-        "access": "public"
-    },
-    "devDependencies": {
-        "eslint": "^8.7.0",
-        "eslint-config-standard": "17.0.0-0",
-        "eslint-plugin-eslint-comments": "^3.2.0",
-        "eslint-plugin-html": "^6.2.0",
-        "eslint-plugin-import": "^2.25.4",
-        "eslint-plugin-jsonc": "^2.0.0",
-        "eslint-plugin-n": "^14.0.0",
-        "eslint-plugin-promise": "^6.0.0",
-        "eslint-plugin-unicorn": "^40.1.0",
-        "eslint-plugin-vue": "8.3.0",
-        "jsonc-eslint-parser": "^2.1.0"
-    }
+	"name": "@spada/eslint-config",
+	"version": "0.0.9",
+	"license": "MIT",
+	"author": "Nicola Spadari <spadari.nicola@gmail.com> (https://github.com/NicolaSpadari/)",
+	"description": "My custom ESlint config for Javascript and Vue projects",
+	"scripts": {
+		"publish:patch": "npm version patch --no-git-tag-version && npm publish",
+		"publish:minor": "npm version minor --no-git-tag-version && npm publish",
+		"publish:major": "npm version major --no-git-tag-version && npm publish"
+	},
+	"files": [
+		"index.js"
+	],
+	"main": "index.js",
+	"peerDependencies": {
+		"eslint": ">=7.4.0"
+	},
+	"publishConfig": {
+		"access": "public"
+	},
+	"dependencies": {
+		"eslint-config-standard": "17.0.0-0",
+		"eslint-plugin-eslint-comments": "^3.2.0",
+		"eslint-plugin-html": "^6.2.0",
+		"eslint-plugin-import": "^2.25.4",
+		"eslint-plugin-jsonc": "^2.0.0",
+		"eslint-plugin-n": "^14.0.0",
+		"eslint-plugin-promise": "^6.0.0",
+		"eslint-plugin-unicorn": "^40.1.0",
+		"eslint-plugin-vue": "8.3.0",
+		"jsonc-eslint-parser": "^2.1.0",
+		"@babel/eslint-parser": "^7.16.5"
+	},
+	"devDependencies": {
+		"eslint": "^8.7.0"
+	}
 }
