@@ -4,6 +4,11 @@
 	"license": "MIT",
 	"author": "Nicola Spadari <spadari.nicola@gmail.com> (https://github.com/NicolaSpadari/)",
 	"description": "My custom ESlint config for Javascript and Vue projects",
+	"keywords": [
+		"eslint",
+		"eslint config",
+		"spada"
+	],
 	"scripts": {
 		"publish:patch": "npm version patch --no-git-tag-version && npm publish",
 		"publish:minor": "npm version minor --no-git-tag-version && npm publish",
