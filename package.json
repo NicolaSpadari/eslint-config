@@ -1,6 +1,6 @@
 {
 	"name": "@spada/eslint-config",
-	"version": "0.0.10",
+	"version": "0.0.11",
 	"license": "MIT",
 	"author": "Nicola Spadari <spadari.nicola@gmail.com> (https://github.com/NicolaSpadari/)",
 	"description": "My custom ESlint config for Javascript and Vue projects",
@@ -19,7 +19,7 @@
 	],
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/NicolaSpadari/vite-plugin-restart.git"
+		"url": "https://github.com/NicolaSpadari/eslint-config.git"
 	},
 	"main": "index.js",
 	"peerDependencies": {
