@@ -1,39 +1,45 @@
 {
-	"name": "@spada/eslint-config",
-	"version": "0.1.0",
-	"license": "MIT",
-	"author": "Nicola Spadari <spadari.nicola@gmail.com> (https://github.com/NicolaSpadari/)",
-	"description": "My custom ESlint config for Typescript and Vue projects, based on @antfu/eslint-config",
-	"keywords": [
-		"eslint",
-		"config",
-		"spada",
-		"antfu",
-		"lint"
-	],
-	"scripts": {
-		"publish:patch": "npm version patch --no-git-tag-version && npm publish",
-		"publish:minor": "npm version minor --no-git-tag-version && npm publish",
-		"publish:major": "npm version major --no-git-tag-version && npm publish"
-	},
-	"files": [
-		"index.js"
-	],
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/NicolaSpadari/eslint-config.git"
-	},
-	"main": "index.js",
-	"peerDependencies": {
-		"eslint": ">=8.16.0"
-	},
-	"publishConfig": {
-		"access": "public"
-	},
-	"dependencies": {
-		"@antfu/eslint-config": "^0.24.2"
-	},
-	"devDependencies": {
-		"eslint": "^8.16.0"
-	}
+  "name": "@spada/eslint-config",
+  "version": "0.1.0",
+  "license": "MIT",
+  "author": "Nicola Spadari <spadari.nicola@gmail.com> (https://github.com/NicolaSpadari/)",
+  "description": "My custom ESlint config for Typescript and Vue projects",
+  "keywords": [
+    "eslint",
+    "config",
+    "spada",
+    "lint"
+  ],
+  "scripts": {
+    "publish:patch": "npm version patch --no-git-tag-version && npm publish",
+    "publish:minor": "npm version minor --no-git-tag-version && npm publish",
+    "publish:major": "npm version major --no-git-tag-version && npm publish"
+  },
+  "files": [
+    "index.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NicolaSpadari/eslint-config.git"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.26.0",
+    "@typescript-eslint/parser": "^5.26.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-vue": "8.5.0",
+    "prettier": "^2.6.2",
+    "typescript": "^4.7.2"
+  },
+  "peerDependencies": {
+    "eslint": ">=8.16.0",
+    "typescript": ">=4.7"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "eslint": "^8.16.0"
+  }
 }
