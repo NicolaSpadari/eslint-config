@@ -169,6 +169,7 @@ module.exports = {
                 "vue/multi-word-component-names": "off",
                 "vue/prefer-import-from-vue": "off",
                 "vue/no-setup-props-destructure": "off",
+                "vue/valid-attribute-name":  "off",
                 "vue/block-tag-newline": ["error", {
                     singleline: "always",
                     multiline: "always"
