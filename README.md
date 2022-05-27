@@ -1,5 +1,7 @@
 # @spada/eslint-config
 
+> Based on @antfu/eslint-config with some tweaks
+
 ### Install
 
 ```bash
@@ -12,19 +14,9 @@ npm i eslint @spada/eslint-config -D
 
 ```json
 {
-	"extends": ["@spada"]
+	"extends": ["@spada/eslint-config"]
 	// More if needed
 }
-```
-
-<br>
-
-### `.eslintignore` file
-
-```txt
-dist
-public
-node_modules
 ```
 
 <br>
@@ -35,12 +27,11 @@ Add `.vscode/settings.json` with content:
 
 ```json
 {
-	"prettier.enable": false,
 	"editor.formatOnSave": false,
 	"editor.defaultFormatter": "dbaeumer.vscode-eslint",
 	"editor.codeActionsOnSave": {
 		"source.fixAll.eslint": true
 	},
-	"eslint.validate": ["javascript", "vue", "html"]
+	"eslint.validate": ["javascript", "typescript", "vue", "html", "json"]
 }
 ```
