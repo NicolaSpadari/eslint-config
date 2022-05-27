@@ -42,11 +42,13 @@ module.exports = {
         "plugin:vue/vue3-recommended"
     ],
     overrides: [
+        // TypeScript
         {
             files: ["*.ts"],
             parser: "@typescript-eslint/parser",
             rules: {
                 "import/named": "off",
+                "import/no-unresolved": ["off"],
                 "@typescript-eslint/ban-ts-comment": ["error", { "ts-ignore": "allow-with-description" }],
                 "@typescript-eslint/member-delimiter-style": ["error", { multiline: { delimiter: "none" } }],
                 "@typescript-eslint/type-annotation-spacing": ["error", {}],
@@ -100,13 +102,13 @@ module.exports = {
                 "brace-style": "off",
                 "@typescript-eslint/brace-style": ["error", "1tbs"],
                 "comma-dangle": "off",
-                "@typescript-eslint/comma-dangle": ["error", "always-multiline"],
+                "@typescript-eslint/comma-dangle": ["error", "never"],
                 "object-curly-spacing": "off",
                 "@typescript-eslint/object-curly-spacing": ["error", "always"],
-                "semi": "off",
+                "semi": ["warn", "always"],
                 "@typescript-eslint/semi": ["warn", "always"],
                 "quotes": "off",
-                "@typescript-eslint/quotes": ["error", "single"],
+                "@typescript-eslint/quotes": ["error", "double"],
                 "space-before-blocks": "off",
                 "@typescript-eslint/space-before-blocks": ["error", "always"],
                 "space-before-function-paren": "off",
@@ -147,6 +149,8 @@ module.exports = {
                 "@typescript-eslint/triple-slash-reference": "off"
             }
         },
+
+        // Vue
         {
             files: ["*.vue"],
             parser: "vue-eslint-parser",
@@ -154,6 +158,7 @@ module.exports = {
                 parser: "@typescript-eslint/parser"
             },
             rules: {
+                "indent": off,
                 "no-unused-vars": "off",
                 "no-undef": "off",
                 "@typescript-eslint/no-unused-vars": "off",
@@ -171,9 +176,7 @@ module.exports = {
                 "vue/component-name-in-template-casing": ["error", "PascalCase"],
                 "vue/component-options-name-casing": ["error", "PascalCase"],
                 "vue/custom-event-name-casing": ["error", "camelCase"],
-                "vue/define-macros-order": ["error", {
-                    order: ["defineProps", "defineEmits"]
-                }],
+                "vue/define-macros-order": ["off"],
                 "vue/html-comment-content-spacing": ["error", "always", {
                     exceptions: ["-"]
                 }],
@@ -197,7 +200,7 @@ module.exports = {
                 "vue/arrow-spacing": ["error", { before: true, after: true }],
                 "vue/block-spacing": ["error", "always"],
                 "vue/brace-style": ["error", "stroustrup", { allowSingleLine: true }],
-                "vue/comma-dangle": ["error", "always-multiline"],
+                "vue/comma-dangle": ["error", "never"],
                 "vue/comma-spacing": ["error", { before: false, after: true }],
                 "vue/comma-style": ["error", "last"],
                 "vue/dot-location": ["error", "property"],
@@ -237,6 +240,8 @@ module.exports = {
                 "vue/template-curly-spacing": "error"
             }
         },
+
+        // Json
         {
             files: ["*.json", "*.json5"],
             parser: "jsonc-eslint-parser",
