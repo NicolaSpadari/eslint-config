@@ -151,6 +151,7 @@ module.exports = {
                 parser: "@typescript-eslint/parser"
             },
             rules: {
+                "semi": ["error", "always"],
                 "indent": "off",
                 "no-unused-vars": "off",
                 "no-undef": "off",
