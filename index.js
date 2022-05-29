@@ -162,7 +162,6 @@ module.exports = {
                 "vue/multi-word-component-names": "off",
                 "vue/prefer-import-from-vue": "off",
                 "vue/no-setup-props-destructure": "off",
-                "vue/valid-attribute-name":  "off",
                 "vue/block-tag-newline": ["error", {
                     singleline: "always",
                     multiline: "always"
@@ -474,6 +473,8 @@ module.exports = {
         "n/no-path-concat": "error",
         "n/process-exit-as-throw": "error",
 
-        "promise/param-names": "error"
+        "promise/param-names": "error",
+
+        "vue/valid-attribute-name": "off"
     }
 }
