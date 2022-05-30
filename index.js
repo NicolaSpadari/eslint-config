@@ -476,6 +476,7 @@ module.exports = {
 
         "promise/param-names": "error",
 
-        "vue/valid-attribute-name": "off"
+        "vue/valid-attribute-name": "off",
+        "vue/comment-directive": "off"
     }
 }
