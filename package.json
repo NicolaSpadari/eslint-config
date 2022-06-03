@@ -30,6 +30,7 @@
     "eslint-plugin-jsonc": "^2.2.1",
     "eslint-plugin-n": "^15.2.0",
     "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-unicorn": "^42.0.0",
     "jsonc-eslint-parser": "^2.1.0",
     "@typescript-eslint/eslint-plugin": "^5.26.0",
     "@typescript-eslint/parser": "^5.26.0",

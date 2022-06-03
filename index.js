@@ -13,7 +13,8 @@ module.exports = {
         "html",
         "import",
         "n",
-        "promise"
+        "promise",
+        "unicorn"
     ],
     globals: {
         document: "readonly",
@@ -140,6 +141,14 @@ module.exports = {
                 "@typescript-eslint/ban-types": "off",
                 "@typescript-eslint/no-namespace": "off",
                 "@typescript-eslint/triple-slash-reference": "off"
+            }
+        },
+
+        // Vue TS composables
+        {
+            files: ["use*.ts"],
+            rules: {
+                "no-undef": "off"
             }
         },
 
@@ -421,6 +430,19 @@ module.exports = {
         "object-property-newline": ["error", { allowMultiplePropertiesPerLine: true }],
         "one-var": ["error", { initialized: "never" }],
         "operator-linebreak": ["error", "after", { overrides: { "?": "before", ":": "before", "|>": "before" } }],
+
+        "unicorn/error-message": "error",
+        "unicorn/escape-case": "error",
+        "unicorn/no-instanceof-array": "error",
+        "unicorn/no-new-buffer": "error",
+        "unicorn/no-unsafe-regex": "off",
+        "unicorn/number-literal-case": "error",
+        "unicorn/prefer-includes": "error",
+        "unicorn/prefer-starts-ends-with": "error",
+        "unicorn/prefer-text-content": "error",
+        "unicorn/prefer-type-error": "error",
+        "unicorn/throw-new-error": "error",
+
         "padded-blocks": ["error", { blocks: "never", switches: "never", classes: "never" }],
         "prefer-const": ["error", { destructuring: "all" }],
         "prefer-promise-reject-errors": "error",
