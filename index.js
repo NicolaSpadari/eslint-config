@@ -317,7 +317,7 @@ module.exports = {
         "key-spacing": ["error", { beforeColon: false, afterColon: true }],
         "keyword-spacing": ["error", { before: true, after: true }],
         "lines-between-class-members": ["error", "always", { exceptAfterSingleLine: true }],
-        "multiline-ternary": ["error", "always-multiline"],
+        "multiline-ternary": ["error", "never"],
         "new-cap": ["error", { newIsCap: true, capIsNew: false, properties: true }],
         "new-parens": "error",
         "no-array-constructor": "error",
