@@ -152,6 +152,14 @@ module.exports = {
             }
         },
 
+        // TS tests
+        {
+            files: ["*.test.ts"],
+            rules: {
+                "no-undef": "off"
+            }
+        },
+
         // Vue
         {
             files: ["*.vue"],
