@@ -23,6 +23,7 @@ module.exports = {
     },
     ignorePatterns: [
         "*.min.*",
+        "*.d.ts",
         "dist",
         "public",
         "temp",
@@ -272,7 +273,7 @@ module.exports = {
     rules: {
         "no-var": "warn",
         "object-shorthand": ["warn", "properties"],
-
+        "reportUnusedDisableDirectives": true,
         "accessor-pairs": ["error", { setWithoutGet: true, enforceForClassMembers: true }],
         "array-bracket-spacing": ["error", "never"],
         "array-callback-return": ["error", {
