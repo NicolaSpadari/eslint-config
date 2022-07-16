@@ -11,7 +11,7 @@ Lint and format `.js`, `.ts`, `.vue` files
 ### Install
 
 ```bash
-npm i eslint @spada/eslint-config -D
+npm i -D eslint @spada/eslint-config
 ```
 
 <br>
@@ -20,7 +20,7 @@ npm i eslint @spada/eslint-config -D
 
 ```json
 {
-	"extends": "@spada/eslint-config"
+  "extends": "@spada/eslint-config"
 }
 ```
 
@@ -30,10 +30,10 @@ npm i eslint @spada/eslint-config -D
 
 ```json
 {
-	"editor.formatOnSave": false,
-	"editor.defaultFormatter": "dbaeumer.vscode-eslint",
-	"editor.codeActionsOnSave": {
-		"source.fixAll.eslint": true
-	}
+  "editor.formatOnSave": false,
+  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
 }
 ```
