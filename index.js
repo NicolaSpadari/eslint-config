@@ -145,25 +145,9 @@ module.exports = {
             }
         },
 
-        // Vue TS composables
-        {
-            files: ["use*.ts"],
-            rules: {
-                "no-undef": "off"
-            }
-        },
-
-        // TS tests
-        {
-            files: ["*.test.ts"],
-            rules: {
-                "no-undef": "off"
-            }
-        },
-
         // Vue
         {
-            files: ["*.vue"],
+            files: ["/**/*.vue"],
             parser: "vue-eslint-parser",
             parserOptions: {
                 parser: "@typescript-eslint/parser"
