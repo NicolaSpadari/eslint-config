@@ -1,6 +1,6 @@
 {
   "name": "@spada/eslint-config",
-  "version": "0.3.9",
+  "version": "0.3.10",
   "license": "MIT",
   "author": "Nicola Spadari <spadari.nicola@gmail.com> (https://github.com/NicolaSpadari/)",
   "description": "My custom ESlint config for Typescript and Vue projects, inspired by @antfu",
