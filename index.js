@@ -32,7 +32,7 @@ module.exports = {
     ],
     settings: {
         "import/resolver": {
-            node: { extensions: [".js", ".mjs", ".ts"] }
+            node: { extensions: [".js", ".mjs", ".ts", ".d.ts"] }
         }
     },
     extends: [
@@ -147,7 +147,7 @@ module.exports = {
 
         // Vue
         {
-            files: ["/**/*.vue"],
+            files: ["*.vue"],
             parser: "vue-eslint-parser",
             parserOptions: {
                 parser: "@typescript-eslint/parser"
